@@ -1,11 +1,11 @@
-const path = require('path')
-const { defineConfig } = require('vite')
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
 
 const componentName = process.env.COMPONENT_NAME
 
-module.exports = defineConfig({
+export default defineConfig({
   plugins: [
     vue(),
     externalGlobals({
@@ -14,7 +14,7 @@ module.exports = defineConfig({
   ], // to process SFC
   build: {
     lib: {
-      entry: path.resolve(__dirname, `src/components/${componentName}.ts`),
+      entry: resolve(__dirname, `src/components/${componentName}.vue`),
       name: componentName,
       formats: ['umd'], // adding 'umd' requires globals set to every external module
       fileName: (_, name) => `${name}.js`

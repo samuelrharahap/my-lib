@@ -1,6 +1,7 @@
 node_modules
 .DS_Store
 dist
+dist-umd
 dist-ssr
 *.local
 docs/.vuepress/.cache

@@ -1,17 +1,17 @@
-const { exec } = require('child_process')
+import { exec } from 'child_process'
+import fs from 'fs'
+
 const testFolder = './src/components'
-const fs = require('fs')
 
 const components = fs.readdirSync(testFolder).filter((file) => {
-  const excludeFiles = ['index.ts']
   const fileNameSplitByDot = file.split('.')
   const fileExtension = fileNameSplitByDot[fileNameSplitByDot.length - 1]
 
-  return fileExtension === 'ts' && !excludeFiles.includes(file)
+  return fileExtension === 'vue'
 })
 
 components.forEach((component) => {
-  const componentName = component.replace('.ts', '')
+  const componentName = component.replace('.vue', '')
   const buildCommand = `COMPONENT_NAME=${componentName} vite build -c vite.config-umd.ts`
   console.log(buildCommand)
   exec(buildCommand)

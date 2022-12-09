@@ -1,9 +1,9 @@
-const path = require('path')
-const { defineConfig } = require('vite')
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
 
-module.exports = defineConfig({
+export default defineConfig({
   plugins: [
     vue(),
     externalGlobals({
@@ -12,10 +12,9 @@ module.exports = defineConfig({
   ], // to process SFC
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'),
+      entry: resolve(__dirname, 'src/components/index.ts'),
       name: 'my-lib',
-      formats: ['es'], // adding 'umd' requires globals set to every external module
-      fileName: (format) => `my-lib.${format}.js`
+      fileName: 'my-lib'
     },
     rollupOptions: {
       // external modules won't be bundled into your library
