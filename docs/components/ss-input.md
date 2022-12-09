@@ -1,22 +1,19 @@
 <script setup>
-import Basic from './demo/ComponentB/Basic.vue'
+import Basic from './demo/SsInput/Basic.vue'
 </script>
-# Component B
+# SsInput
 
-This component depends on third-party component library for Vue 3:
-
-* Component (button) from [PrimeVue](https://www.primefaces.org/primevue/)
-* CSS from [PrimeIcons](https://www.primefaces.org/showcase/icons.xhtml) and [PrimeFlex](https://www.primefaces.org/primeflex/)
+This is a simple Input component.
 
 ## Example Usage
 
-Click the buttons to change the count.
+You may show demo below with the code snippet.
 
 <DemoContainer>
   <Basic/>
 </DemoContainer>
 
-<<< @/components/demo/ComponentB/Basic.vue
+<<< @/components/demo/SsInput/Basic.vue
 
 ## Reference
 You may show props, slots, events, methods, etc. using Markdown.

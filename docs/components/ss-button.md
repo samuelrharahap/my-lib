@@ -1,10 +1,10 @@
 <script setup>
-import Basic from './demo/ComponentA/Basic.vue'
+import Basic from './demo/SsButton/Basic.vue'
 </script>
 
-# Component A
+# SsButton
 
-This is a simple Hello Word component with a prop and use icon <span class="icon-heart" style="color:tomato"></span> from a font file.
+This is a simple Button component.
 
 ## Example Usage
 
@@ -14,17 +14,16 @@ You may show demo below with the code snippet.
   <Basic/>
 </DemoContainer>
 
-<<< @/components/demo/ComponentA/Basic.vue
+<<< @/components/demo/SsButton/Basic.vue
 
 ## Reference
 
 You may show props, slots, events, methods, etc. using Markdown.
 
 ### Properties
-
-| Name | Type   | Default | Description    |
-| ---- | ------ | ------- | -------------- |
-| msg  | string | null    | Messge to show |
+| Name        | Type     | Default  | Description     |
+| ----------- | -------- | -------- | --------------- |
+|             |          |          |                 |
 
 ### Events
 
